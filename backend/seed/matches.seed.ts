@@ -1,5 +1,4 @@
 import 'dotenv/config';
-import mongoose from 'mongoose';
 import connectDB from '../config/db.config';
 import { MatchModel } from '../models/match.model';
 
