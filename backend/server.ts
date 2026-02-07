@@ -1,7 +1,13 @@
+import 'dotenv/config';
 import app from './app';
+import connectDB from './config/db.config';
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
-app.listen(PORT, () => {
-  console.log(`Slamma server is running at http://localhost:${PORT}`);
-});
+const startServer = async () => {
+  await connectDB();
+
+  app.listen(PORT, () => {
+    console.log(`Slamma server is running at http://localhost:${PORT}`);
+  });
+}
