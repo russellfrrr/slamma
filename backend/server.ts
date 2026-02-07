@@ -11,3 +11,5 @@ const startServer = async () => {
     console.log(`Slamma server is running at http://localhost:${PORT}`);
   });
 }
+
+startServer();
