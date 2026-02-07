@@ -4,7 +4,8 @@
   "description": "",
   "main": "server.ts",
   "scripts": {
-    "dev": "tsx watch server.ts"
+    "dev": "tsx watch server.ts",
+    "seed:matches": "tsx seed/matches.seed.ts"
   },
   "keywords": [],
   "author": "",

@@ -40,4 +40,4 @@ const matchSchema = new Schema<Match>({
     },
 }, { timestamps: true });
 
-const MatchModel = mongoose.model<Match>('Match', matchSchema);
+export const MatchModel = mongoose.model<Match>('Match', matchSchema);
