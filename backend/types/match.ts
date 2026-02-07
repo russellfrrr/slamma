@@ -26,3 +26,9 @@ export interface Match {
   winner: 'A' | 'B';
 }
 
+export interface MatchFilters {
+  year?: number;
+  tournament?: GrandSlam;
+  category?: Category;
+  round?: Round;
+}
