@@ -32,3 +32,14 @@ export interface MatchFilters {
   category?: Category;
   round?: Round;
 }
+
+export interface CreateMatchInput {
+  tournament: GrandSlam;
+  year: number;
+  category: Category;
+  round: Round;
+  playerA: string;
+  playerB: string;
+  score: string;
+  winner: 'A' | 'B';
+}

@@ -1,5 +1,5 @@
 import { MatchModel } from "../models/match.model";
-import { Match, MatchFilters } from "../types/match";
+import { Match, MatchFilters, CreateMatchInput } from "../types/match";
 
 class MatchService {
   async getAllMatches(filters: MatchFilters = {}): Promise<Match[]> {
@@ -27,6 +27,12 @@ class MatchService {
     });
 
     return matches;
+  }
+
+  async createMatch(input: CreateMatchInput): Promise<Match> {
+    const match = await MatchModel.create(input);
+
+    return match;
   }
 }
 
