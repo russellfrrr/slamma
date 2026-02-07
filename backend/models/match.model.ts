@@ -14,6 +14,11 @@ const matchSchema = new Schema<Match>({
     category: {
       type: String,
       required: true,
+      enum: ["MENS_SINGLES", "WOMENS_SINGLES"],
+    },
+    round: {
+      type: String,
+      required: true,
       enum: ["R128", "R64", "R32", "R16", "QF", "SF", "FINAL"],
     },
     playerA: {
@@ -35,4 +40,4 @@ const matchSchema = new Schema<Match>({
     },
 }, { timestamps: true });
 
-const Match = mongoose.model<Match>('Match', matchSchema);
+const MatchModel = mongoose.model<Match>('Match', matchSchema);
