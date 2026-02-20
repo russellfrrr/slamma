@@ -15,7 +15,7 @@ function App() {
         <main>
           <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
             <p className="text-neutral-400 text-sm">
-              App scaffold ready.
+              App scaffolding only.
             </p>
           </div>
         </main>
