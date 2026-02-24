@@ -12,7 +12,7 @@ class TournamentService {
   }
 
   static async getAll() {
-    const tournament = Tournament.find.sort({ createdAt: -1 });
+    const tournament = Tournament.find().sort({ createdAt: -1 });
 
     return tournament;
   }
