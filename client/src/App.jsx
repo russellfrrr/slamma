@@ -1,26 +1,14 @@
+import { Routes, Route } from 'react-router-dom'
+import TournamentsPage from './pages/TournamentsPage'
+import TournamentDetailPage from './pages/TournamentDetailPage'
+
 function App() {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
-      <div className="max-w-5xl mx-auto px-6 py-12">
-        
-        <header className="mb-10">
-          <h1 className="text-3xl font-semibold tracking-tight">
-            Slamma
-          </h1>
-          <p className="text-neutral-400 mt-2 text-sm">
-            Grand Slam match tracker
-          </p>
-        </header>
-
-        <main>
-          <div className="bg-neutral-900 border border-neutral-800 rounded-lg p-6">
-            <p className="text-neutral-400 text-sm">
-              App scaffolding only.
-            </p>
-          </div>
-        </main>
-
-      </div>
+    <div className="min-h-screen bg-neutral-950 text-white">
+      <Routes>
+        <Route path="/" element={<TournamentsPage />} />
+        <Route path="/tournaments/:slug" element={<TournamentDetailPage />} />
+      </Routes>
     </div>
   )
 }
